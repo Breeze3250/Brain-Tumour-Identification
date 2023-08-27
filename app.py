@@ -12,6 +12,7 @@ app = Flask(__name__)
 model = tf.keras.models.load_model('BrainTumour10EpochsCategorical.h5')
 print('Model loaded. Check http://127.0.0.1:5000/')
 
+#Model Functions
 def brain_classification(classType):
     if classType == 0:
         return "No Brain Tumour"
@@ -27,6 +28,7 @@ def getResult(img):
     result = np.argmax(model.predict(input_img), axis = -1)
     return result
 
+#App Setup
 @app.route('/', methods = ['GET'])
 def index():
     return render_template('index.html')
