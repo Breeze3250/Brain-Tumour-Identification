@@ -70,7 +70,7 @@ model = tf.keras.Sequential([
 
 #Model Compilation and Training
 model.compile(loss = 'categorical_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
-model.fit(x_train, y_train, batch_size = 16, verbose = True, epochs = 10, 
+model.fit(x_train, y_train, batch_size = 8, verbose = True, epochs = 20, 
 validation_data = (x_test, y_test), shuffle = False)
 
 model.save('BrainTumour10EpochsCategorical.h5')
