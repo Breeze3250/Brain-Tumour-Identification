@@ -2,4 +2,4 @@ flask==2.0.3
 Werkzeug==2.2.2
 tensorflow==2.15.0
 gunicorn==19.7.1
-pillow=10.2.0
+pillow==10.2.0
