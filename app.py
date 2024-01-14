@@ -10,7 +10,6 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 model = tf.keras.models.load_model('BrainTumour10EpochsCategorical.h5')
-print('Model loaded. Check http://127.0.0.1:5000/')
 
 #Model Functions
 def brain_classification(classType):
